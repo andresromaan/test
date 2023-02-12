@@ -1,0 +1,26 @@
+button.btn.bg-green {
+    background-color: #28A745;
+    color: white;
+
+    &.btn.bg-green:hover {
+        background-color: #1b7730;
+    }
+    &.btn.bg-green:active {
+        color: white;
+    }
+}
+
+
+.datos_generales label  {
+    font-weight: 600;
+}
+
+.tabla__usuarios i.delete  {
+    color: red;
+    cursor: pointer;
+}
+
+span#missing-fields-error {
+    color: #b02a37;
+    display: none;
+}

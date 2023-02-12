@@ -1,0 +1,12 @@
+button.btn.bg-mr {
+    background-color: #7749F8;
+    color: white;
+    &.btn.bg-mr:active{
+        color: white;
+        border: none;
+    }
+}
+
+.modal-eye i {
+    color:grey;
+}  

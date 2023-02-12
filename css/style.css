@@ -1,0 +1,60 @@
+header {
+  background-color: #A5CBF1;
+}
+
+.navbar-brand {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #212529;
+}
+
+#navbarNav a {
+  color: #828282;
+}
+#navbarNav a:hover {
+  color: black;
+}
+
+#navbarNav a.nav-link.active {
+  color: black;
+}
+
+button.btn.bg-green {
+  background-color: #28A745;
+  color: white;
+}
+button.btn.bg-green.btn.bg-green:hover {
+  background-color: #1b7730;
+}
+button.btn.bg-green.btn.bg-green:active {
+  color: white;
+}
+
+.datos_generales label {
+  font-weight: 600;
+}
+
+.tabla__usuarios i.delete {
+  color: red;
+  cursor: pointer;
+}
+
+span#missing-fields-error {
+  color: #b02a37;
+  display: none;
+}
+
+button.btn.bg-mr {
+  background-color: #7749F8;
+  color: white;
+}
+button.btn.bg-mr.btn.bg-mr:active {
+  color: white;
+  border: none;
+}
+
+.modal-eye i {
+  color: grey;
+}
+
+/*# sourceMappingURL=style.css.map */

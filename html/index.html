@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--Menú-Header-->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/images/brand.svg" alt="Logotipo" width="30" height="24" class="d-inline-block align-text-top">                    
+                    <span class="ps-2">Brand</span>
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse ps-4" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li id="accounts-link" class="nav-item">
+                        <a class="nav-link" href="accounts.html">Cuentas</a>
+                    </li>
+                    <li id="login-link" class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#ModalLogin">Iniciar Sesión</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+<!--/Menú-Header-->
+<!--DatosUsuarios-->
+    <section class="container mt-4 mt-md-5">
+    <!--Filtros-->
+        <form class="row mb-4 align-items-center">
+            <div class="col-12 col-md-1">
+                <label class="form-check-label">Filtro:</label>
+            </div>
+            <div class="col-12 col-sm-3 mt-2 mb-4 my-md-0 ">
+                <label class="visually-hidden" for="SelectSexo">Preference</label>
+                <select class="form-select" id="filter-select">
+                    <option selected disabled>Sexo</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div class="col-3 col-md-2">
+                <button class="btn btn-filter bg-green">Filtrar</button>
+            </div>
+            <div class="col-5 col-md-3 offset-md-3 d-md-flex">
+                <button type="submit" class="btn btn-primary btn-reset-filter ms-auto">Limpiar Filtro</button>
+            </div>
+        </form>
+    <!--/Filtros-->
+    <!--Tabla Usuarios-->
+        <div class="container table-responsive">
+            <div id="table-container" class="row">
+            </div>
+        <!--Datos Promedios-->
+            <div class="row mt-2 datos_generales">
+                <label id="average-age" class="col-12 col-md-auto mb-3"></label>
+                <label id="female-users" class="col-12 col-md-auto mb-3"></label>
+                <label id="male-users" class="col-12 col-md-auto mb-3"></label>
+            </div>
+        <!--/Datos Promedios-->
+        </div>
+    <!--/Tabla Usuarios-->
+    </section>
+<!--DatosUsuarios-->
+<!--ModalLogin-->
+    <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-0">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="email" class="form-label col-12">Email *</label>
+                        <input id="email-modal" type="text" class="form-control col-12" required aria-label="Email" aria-describedby="basic-addon">
+                        <div id="email-error" class="invalid-feedback"></div>
+                        <label for="password" class="form-label col-12 mt-4">Password *</label>
+                        <!-- <input type="password" class="form-control col-12 mb-4" required> -->
+                        <div class="input-group col-12 mb-4">
+                            <input id="password-modal" type="password" class="form-control">
+                            <span id="toggle-password" class="input-group-text modal-eye"><a href="#" data-toggle="tooltip"><i id="eye-icon" class="fa-solid fa-eye-slash"></i></a></span>
+                            <div id="password-error" class="invalid-feedback"></div>
+                        </div>
+                        <div class="modal-footer col-12">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="btn-login" class="btn bg-mr ms-2 me-0" disabled>Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+<!--/ModalLogin-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
